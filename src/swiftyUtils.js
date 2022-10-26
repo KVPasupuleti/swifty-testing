@@ -3,20 +3,20 @@ const SWIFTY_VARIABLES_SCRIPT_ID = "swifty-variables-script-id"
 
 
 export function loadSwifty() {
-    const swiftyStylesLink = document.createElement('link')
-    swiftyStylesLink.setAttribute('href', 'https://nxtwave.helpjuice.com/swifty.css')
+  const swiftyStylesLink = document.createElement('link')
+  swiftyStylesLink.href = 'https://nxtwave.helpjuice.com/swifty.css'
 
-    const swiftyJsScript = document.createElement('script')
-    swiftyJsScript.id = SWIFTY_JS_SCRIPT_ID
-    swiftyJsScript.src = "https://nxtwave.helpjuice.com/swifty.js"
-    swiftyVariablesScript.type = "application/javascript";
-    swiftyJsScript.async = false
+  const swiftyJsScript = document.createElement('script')
+  swiftyJsScript.id = SWIFTY_JS_SCRIPT_ID
+  swiftyJsScript.src = "https://nxtwave.helpjuice.com/swifty.js"
+  swiftyJsScript.type = "application/javascript";
+  swiftyJsScript.async = false
 
-    const swiftyVariablesScript = document.createElement('script')
-    swiftyVariablesScript.id = SWIFTY_VARIABLES_SCRIPT_ID
-    swiftyVariablesScript.type = "application/javascript";
-    swiftyVariablesScript.async = false
-    swiftyVariablesScript.innerHTML = `
+  const swiftyVariablesScript = document.createElement('script')
+  swiftyVariablesScript.id = SWIFTY_VARIABLES_SCRIPT_ID
+  swiftyVariablesScript.type = "application/javascript";
+  swiftyVariablesScript.async = false
+  swiftyVariablesScript.innerHTML = `
       helpjuice_account_url = 'https://nxtwave.helpjuice.com';
       helpjuice_contact_us_url = 'https://nxtwave.helpjuice.com/contact-us';
       helpjuiceSwiftyConfig = {
@@ -37,7 +37,7 @@ export function loadSwifty() {
       }
   `
 
-    document.head.appendChild(swiftyStylesLink)
-    document.head.appendChild(swiftyJsScript)
-    document.head.appendChild(swiftyVariablesScript)
+  document.head.appendChild(swiftyStylesLink)
+  document.head.appendChild(swiftyJsScript)
+  document.head.appendChild(swiftyVariablesScript)
 }
